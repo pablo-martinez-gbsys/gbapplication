@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { topBusinessService } from '../service/top-business.service';
+import { TopBusinessResponse } from '../models/topBusiness-response';
 
 @Component({
   selector: 'app-newscr',
@@ -7,10 +9,11 @@ import { Component } from '@angular/core';
 })
 export class NewsCRPage {
 
-  public response:BitcoinNewsResponse;
+  public response:TopBusinessResponse;
 
-  constructor(private bitcoinService:BitcoinNewsService){
-    this.response = new BitcoinNewsResponse();
+
+  constructor(private bitcoinService:topBusinessService){
+    this.response = new TopBusinessResponse();
   }
   
   ngOnInit(){
@@ -18,8 +21,9 @@ export class NewsCRPage {
   }
   
   dataPopulation(){
-    this.bitcoinService.getData().then((data:BitcoinNewsResponse) => {
+    this.bitcoinService.getData().then((data:TopBusinessResponse) => {
       this.response = data;
+      console.log(this.response);
     });
   }
 
