@@ -6,9 +6,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card *ngFor="let item of response.articles">
-    <ion-card-header>
+<ion-content color="primary">
+  <ion-card class="content-background" *ngFor="let item of response.articles">
+    <ion-card-header >
       <img [src]="item.urlToImage"/>
       <ion-card-subtitle>{{item.author}}</ion-card-subtitle>
       <ion-card-title>{{item.title}}</ion-card-title>
@@ -16,6 +16,6 @@
   
     <ion-card-content>
       {{item.description}}
-    </ion-card-content>
+    </ion-card-content >
   </ion-card>
 </ion-content>
