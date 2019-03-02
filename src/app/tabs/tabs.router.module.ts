@@ -26,11 +26,11 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab3',
+        path: 'apple',
         children: [
           {
             path: '',
-            loadChildren: '../tab3/tab3.module#Tab3PageModule'
+            loadChildren: '../apple/apple.module#ApplePageModule'
           }
         ]
       },
