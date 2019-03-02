@@ -26,6 +26,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'domain',
+        children: [
+          {
+            path: '',
+            loadChildren: '../domain/domain.module#DomainPageModule'
+          }
+        ]
+      },
+      {
         path: 'apple',
         children: [
           {
