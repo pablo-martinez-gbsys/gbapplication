@@ -8,11 +8,11 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'bitcoin',
+        path: 'tab1',
         children: [
           {
             path: '',
-            loadChildren: '../bitcoin/bitcoin.module#BitcoinPageModule'
+            loadChildren: '../tab1/tab1.module#Tab1PageModule'
           }
         ]
       },
@@ -35,24 +35,15 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tech-crunch',
-        children: [
-          {
-            path: '',
-            loadChildren: '../tech-crunch/tech-crunch.module#TechCrunchPageModule'
-          }
-        ]
-      },
-      {
         path: '',
-        redirectTo: '/tabs/bitcoin',
+        redirectTo: '/tabs/tab1',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/bitcoin',
+    redirectTo: '/tabs/tab1',
     pathMatch: 'full'
   }
 ];
