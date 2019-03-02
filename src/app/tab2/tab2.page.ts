@@ -22,6 +22,7 @@ export class Tab2Page {
   dataPopulation(){
     this.bitcoinService.getData().then((data:TopBusinessResponse) => {
       this.response = data;
+      console.log(this.response);
     });
   }
 
