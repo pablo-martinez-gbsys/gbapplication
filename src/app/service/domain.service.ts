@@ -9,7 +9,6 @@ export class DomainService {
   private readonly API_KEY = "9e8802a9eda041a19e835090096e421b";
 
   constructor(public http:HttpClient) {
-
    }
 
    public getData():Promise<DomainResponse>{
