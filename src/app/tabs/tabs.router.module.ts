@@ -35,6 +35,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'tech-crunch',
+        children: [
+          {
+            path: '',
+            loadChildren: '../tech-crunch/tech-crunch.module#TechCrunchPageModule'
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/bitcoin',
         pathMatch: 'full'
