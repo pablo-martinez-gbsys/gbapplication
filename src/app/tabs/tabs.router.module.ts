@@ -35,6 +35,15 @@ const routes: Routes = [
         ]
       },
       {
+        path:'top-business-news',
+        children:[
+          {
+            path:'',
+            loadChildren:'../top-business-news/top-business-news.module#topBusinessNewsPageModule'
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/bitcoin',
         pathMatch: 'full'
